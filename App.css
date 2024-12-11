@@ -1,0 +1,104 @@
+/* General Reset */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: Arial, sans-serif;
+  line-height: 1.6;
+  color: #333;
+}
+
+.App {
+  text-align: center;
+}
+
+/* Header Styles */
+.header {
+  background: #0073e6;
+  color: white;
+  padding: 1rem 2rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  position: relative;
+}
+
+.logo {
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+
+.nav {
+  display: flex;
+  align-items: center;
+}
+
+.nav-links {
+  list-style: none;
+  display: flex; /* Default for desktop view */
+}
+
+.nav-links li {
+  margin: 0 1rem;
+}
+
+.nav-links a {
+  color: white;
+  text-decoration: none;
+  font-size: 1rem;
+}
+
+/* Toggle Button */
+.nav-toggle {
+  display: none; /* Hidden in desktop view */
+  background: transparent;
+  border: none;
+  font-size: 1.5rem;
+  cursor: pointer;
+  color: white;
+  z-index: 20;
+}
+
+/* Mobile View */
+@media (max-width: 768px) {
+  .nav-links {
+    display: none; /* Hidden by default */
+    flex-direction: column;
+    position: absolute;
+    top: 60px;
+    right: 20px;
+    background: #0073e6;
+    padding: 1rem;
+    border-radius: 0.5rem;
+    z-index: 10;
+  }
+
+  /* Show menu when toggle is active */
+  .nav.show-nav .nav-links {
+    display: flex;
+  }
+
+  .nav-toggle {
+    display: block; /* Show toggle button in mobile view */
+  }
+}
+
+/* Main Content */
+.main-content {
+  padding: 2rem;
+  text-align: center;
+}
+
+section {
+  margin: 2rem 0;
+}
+
+.footer {
+  background: #333;
+  color: white;
+  text-align: center;
+  padding: 1rem 0;
+}
